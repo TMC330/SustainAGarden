@@ -462,7 +462,8 @@ input[name="csrfmiddlewaretoken"] {
 
 @media screen and (max-width: 767px) {
     body {
-        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
 
     #title img {
@@ -476,7 +477,8 @@ input[name="csrfmiddlewaretoken"] {
     }
     
     .nav {
-        display: block;
+        display: grid;
+        width: 90%;
     }
 
     #plot-container {
