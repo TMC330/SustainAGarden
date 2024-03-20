@@ -466,9 +466,13 @@ input[name="csrfmiddlewaretoken"] {
     }
 
     #title img {
-        width: 320px;
-        height: 56px;
+        width: 360px;
+        height: 63px;
         border-radius: 10px;
+    }
+
+    #challenges {
+        width: 95%;
     }
     
     .nav {
