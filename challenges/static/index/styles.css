@@ -470,6 +470,7 @@ input[name="csrfmiddlewaretoken"] {
         width: 360px;
         height: 63px;
         border-radius: 10px;
+        padding-left: 5%;
     }
 
     #challenges {
@@ -477,7 +478,7 @@ input[name="csrfmiddlewaretoken"] {
     }
     
     .nav {
-        display: grid;
+        display: inline-flexbox;
         width: 90%;
     }
 
