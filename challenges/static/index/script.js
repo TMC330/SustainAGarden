@@ -211,8 +211,8 @@ function purchase(event) {
         tile.appendChild(pink);
         update_balance(20, "subtract");
     }
+    post_balance(balance);
     store_garden();
-    load_balance();
     toggleVisibility("shopInfo");
 }
 
@@ -239,6 +239,7 @@ function update_balance(cost, operation) {
     var balance_string = "Coins: " + balance;
     document.getElementById("coins").innerHTML = balance_string;
     document.getElementById("coinsCounter").innerHTML = balance_string;
+    document.getElementById("shopCoins").innerHTML = balance_string;
 }
 
 function getCookie(name) {

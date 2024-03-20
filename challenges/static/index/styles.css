@@ -67,6 +67,14 @@ input[type="submit"]:hover {
     padding-left: 10px;
 }
 
+#plot-wrapper p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
 #plot-wrapper {
     flex: 1;
     padding-top: 5%;
@@ -92,6 +100,7 @@ input[type="submit"]:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 10px;
+    overflow-y: scroll;
 }
 
 #challenges ul {
@@ -306,6 +315,11 @@ input[type="submit"]:hover {
     top: calc(100% - 600px);
 }
 
+#bottomBarButton p {
+    font-weight: bold;
+    color: #555;
+}
+
 .personal-challenges {
     margin-bottom: 20px;
 }
@@ -354,7 +368,8 @@ input[type="radio"] + span {
     height: 100vh;
 }
 
-#login_form {
+#login_form,
+#addFact_form {
     width: 300px;
     margin: 0 auto;
     padding: 20px;
@@ -376,7 +391,8 @@ input[type="radio"] + span {
 
 /* Style for the form headings */
 #login_form h1,
-#register_form h1 {
+#register_form h1,
+#addFact_form h1 {
     margin-bottom: 20px;
     text-align: center;
 }
@@ -385,7 +401,9 @@ input[type="radio"] + span {
 #login_form input[type="text"],
 #login_form input[type="password"],
 #register_form input[type="text"],
-#register_form input[type="password"] {
+#register_form input[type="password"],
+#addFact_form input[type="text"],
+#addFact_form input[type="password"] {
     width: 80%;
     padding: 10px;
     margin-bottom: 15px;
@@ -395,7 +413,8 @@ input[type="radio"] + span {
 
 /* Style for submit buttons */
 #login_form input[type="submit"],
-#register_form input[type="submit"] {
+#register_form input[type="submit"],
+#addFact_form input[type="submit"] {
     width: 100%;
     padding: 10px;
     border: none;
@@ -407,7 +426,8 @@ input[type="radio"] + span {
 
 /* Hover effect for submit buttons */
 #login_form input[type="submit"]:hover,
-#register_form input[type="submit"]:hover {
+#register_form input[type="submit"]:hover,
+#addFact_form input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
@@ -459,6 +479,26 @@ input[name="csrfmiddlewaretoken"] {
     font-size: small;
 }
 
+@media screen and (max-height: 900px) {
+    #plot-container {
+        margin-top: 10%;
+        grid-template-columns: repeat(18, 40px);
+    }
+
+    #challenges {
+        height: 360px;
+    }
+
+    .tile {
+        height: 40px;
+        width: 40px;
+    }
+
+    .tile img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+}
 
 @media screen and (max-width: 767px) {
     body {
@@ -476,12 +516,13 @@ input[name="csrfmiddlewaretoken"] {
     #challenges {
         width: 75%;
     }
-    
+
     .nav {
         display: block;
     }
 
-    .nav button, .nav #coins {
+    .nav button,
+    .nav #coins {
         display: none;
     }
 
@@ -494,7 +535,7 @@ input[name="csrfmiddlewaretoken"] {
         height: 20px;
         width: 20px;
     }
-    
+
     .tile img {
         max-width: 20px;
         max-height: 20px;
