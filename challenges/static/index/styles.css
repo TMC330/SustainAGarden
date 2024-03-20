@@ -1,0 +1,460 @@
+body {
+    overflow: hidden;
+    background-color: rgb(238, 231, 203);
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+}
+
+#title img {
+    width: 400px;
+    height: 70px;
+    display: block;
+    border-radius: 10px;
+}
+
+#title {
+    width: 400px;
+    height: 70px;
+}
+
+#coins {
+    height: 40px;
+    width: 90px;
+    margin: 5px;
+    background-color: #6c6ca8;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+}
+
+form[action="/challenges/"] {
+    display: inline-block;
+}
+
+input[type="submit"] {
+    background-color: #cf4545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #d32f2f;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#plot-wrapper {
+    flex: 1;
+    padding-top: 5%;
+}
+
+#plot-container {
+    display: grid;
+    grid-template-columns: repeat(18, 60px);
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+#challenges {
+    border: 1px solid #999;
+    background-color: rgb(250, 243, 213);
+    height: 540px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    margin: 5% 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#challenges ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#challenges li {
+    margin-bottom: 8px;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 8px;
+    background-color: rgb(48, 89, 89);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+#challenges li:hover {
+    filter: brightness(150%);
+}
+
+.tile {
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile:hover {
+    filter: brightness(150%);
+}
+
+.tile img {
+    max-width: 60px;
+    max-height: 60px;
+    z-index: -9999;
+}
+
+#profileInfo,
+#shopInfo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profileInfo {
+    height: 30%;
+}
+
+.shopHeader {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#item-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item {
+    width: 100px;
+    height: 140px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.item img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 10px;
+    transition: filter 0.3s ease;
+}
+.item:hover img {
+    filter: brightness(80%);
+}
+
+.item span {
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+#profileButton,
+#shopButton,
+#addChallengeButton,
+#statisticsButton,
+#addFactButton {
+    height: 40px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: rgb(48, 89, 89);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    transition: background-color 0.3s;
+}
+
+#profileButton:hover,
+#shopButton:hover {
+    background-color: #436d5a;
+}
+
+.profileContent {
+    display: flex;
+    align-items: center;
+}
+
+.profileHeader {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profileAvatar {
+    padding-right: 20px;
+}
+
+.profileAvatar img {
+    width: 160px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.profileDetails {
+    display: flex;
+    flex-direction: column;
+    font-size: 200%;
+}
+
+#challengeCounter,
+#coinsCounter {
+    margin-top: 10px;
+}
+
+.shopHeader {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#bottomBar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: rgb(250, 243, 213);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    padding: 10px;
+    z-index: 9999;
+    transition: top 0.5s ease, border-radius 0.5s ease;
+    overflow: hidden;
+    top: calc(100% - 60px);
+}
+
+#bottomBarButton {
+    cursor: pointer;
+    text-align: center;
+}
+
+#bottomBarButton img {
+    height: 30px;
+}
+
+#bottomBarContent {
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+#bottomBar::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #f0f0f0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#bottomBar.open {
+    top: calc(100% - 600px);
+}
+
+.personal-challenges {
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #5b9279;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="radio"]:checked {
+    background-color: #436d5a;
+    border: 2px solid #436d5a;
+}
+
+input[type="radio"] + span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+#check {
+    padding: 10px 20px;
+    background-color: #5b9279;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px;
+}
+
+#check:hover {
+    background-color: #436d5a;
+}
+
+#login_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#login_form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#register_form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the form headings */
+#login_form h1,
+#register_form h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style for form fields */
+#login_form input[type="text"],
+#login_form input[type="password"],
+#register_form input[type="text"],
+#register_form input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style for submit buttons */
+#login_form input[type="submit"],
+#register_form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Hover effect for submit buttons */
+#login_form input[type="submit"]:hover,
+#register_form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for csrf_token input */
+input[name="csrfmiddlewaretoken"] {
+    display: none;
+}
+
+#transport-entry {
+    padding: 0px 10px;
+}
+
+#transport-entry input {
+    margin: 5px;
+}
+
+#game-board {
+    padding: 2%;
+    font-size: large;
+}
+
+#game-board #answer-input {
+    padding-top: 2%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#game-board #answer-input div {
+    color: white;
+    padding: 20px 0px;
+    margin: 20px;
+    background-color: rgb(48, 89, 89);
+    border-radius: 30px;
+    width: 95%;
+}
+
+#game-board label {
+    padding: 0 2%;
+}
+
+#game-board select {
+    border: none;
+    background-color: rgb(48, 89, 89);
+    color: white;
+}
+
+#reward-info {
+    color: grey;
+    font-size: small;
+}
