@@ -116,8 +116,8 @@ input[type="submit"]:hover {
 }
 
 .tile {
-    height: 1%;
-    width: 1%;
+    height: 60px;
+    width: 60px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -129,8 +129,8 @@ input[type="submit"]:hover {
 }
 
 .tile img {
-    max-width: 1%;
-    max-height: 1%;
+    max-width: 60px;
+    max-height: 60px;
     z-index: -9999;
 }
 
