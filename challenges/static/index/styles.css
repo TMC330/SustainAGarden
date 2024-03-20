@@ -470,7 +470,7 @@ input[name="csrfmiddlewaretoken"] {
         width: 360px;
         height: 63px;
         border-radius: 10px;
-        padding-left: 5%;
+        padding-left: 2%;
     }
 
     #challenges {
@@ -481,14 +481,13 @@ input[name="csrfmiddlewaretoken"] {
         display: block;
     }
 
-    .nav button {
+    .nav button, .nav #coins {
         display: none;
     }
 
     #plot-container {
         margin-top: 10%;
         grid-template-columns: repeat(18, 20px);
-        margin-left: 1%;
     }
 
     .tile {
