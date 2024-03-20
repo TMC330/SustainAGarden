@@ -475,6 +475,10 @@ input[name="csrfmiddlewaretoken"] {
         display: block;
     }
 
+    #plot-container {
+        grid-template-columns: repeat(18, 30px);
+    }
+
     .tile {
         height: 30px;
         width: 30px;
