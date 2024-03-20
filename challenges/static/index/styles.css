@@ -478,7 +478,7 @@ input[name="csrfmiddlewaretoken"] {
     }
     
     .nav {
-        display: inline-flexbox;
+        display: block;
         width: 90%;
     }
 
