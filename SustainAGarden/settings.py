@@ -72,6 +72,8 @@ TEMPLATES = [
     },
 ]
 
+STATIC_ROOT = "/home/tomcavilla/SustainAGarden/challenges/static"
+
 STATIC_URL = '/static/'
 
 WSGI_APPLICATION = 'SustainAGarden.wsgi.application'
