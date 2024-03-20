@@ -478,8 +478,7 @@ input[name="csrfmiddlewaretoken"] {
     }
     
     .nav {
-        display: block;
-        width: 90%;
+        display: none;
     }
 
     #plot-container {
