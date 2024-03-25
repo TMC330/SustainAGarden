@@ -12,7 +12,7 @@ def validate_format(data) -> bool:
 
 def get_distance(start, end) -> (float, int):
     print("get distance")
-    geocoder = what3words.Geocoder("COLQ41FP")
+    geocoder = what3words.Geocoder("88AJ0AQY")
     start = geocoder.convert_to_coordinates(start)
     if "error" in start:
         print(f"start: {start}")
